@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/seryj_tekstura_stena_146097_1920x1080"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/my_dog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circle_avatar"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:padding="3dp"
+            android:paddingStart="5dp"
+            android:text="Собака Ника"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvCredo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="3dp"
+            android:paddingStart="5dp"
+            android:text="Я люблю кости, белок и зайцев!"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
+            android:id="@+id/tvOnline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/icons_smart"
+            android:padding="2dp"
+            android:paddingStart="5dp"
+            android:text="Онлайн"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvCredo"
+            tools:layout_editor_absoluteY="75dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Редактировать"
+        android:textColor="@color/black_l"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btEdit">
+
+        <TextView
+            style="@style/style_first"
+            android:drawableTop="@drawable/icons_history"
+            android:text="История" />
+
+        <TextView
+            style="@style/style_first"
+            android:drawableTop="@drawable/icons_pensil"
+            android:text="Запись" />
+
+        <TextView
+            style="@style/style_first"
+            android:drawableTop="@drawable/icons8_photo"
+            android:text="Фото" />
+
+        <TextView
+            style="@style/style_first"
+            android:drawableTop="@drawable/icons8_klip"
+            android:text="Клип" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:background="#7b7b7b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout1"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            style="@style/style_third"
+            android:drawableLeft="@drawable/icons8_city"
+            android:text="Город Ирпень" />
+
+        <TextView
+            style="@style/style_third"
+            android:drawableLeft="@drawable/icons8_edication"
+            android:text="Образование: Общий курс дрессировки" />
+
+        <TextView
+            style="@style/style_third"
+            android:drawableLeft="@drawable/icons8_people"
+            android:text="Подписчиков 3 : Хазяин, его жена и ребенок" />
+
+        <TextView
+            style="@style/style_third"
+            android:drawableLeft="@drawable/icons8_info"
+            android:text="Подробная информация" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="#7b7b7b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvNameFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Друзья"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/tvavki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:drawableEnd="@drawable/icons8_right"
+        android:text="заявки"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameFriend">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivMyPhoto"
+            style="@style/style_four"
+            android:src="@drawable/my_photo"
+            app:shapeAppearanceOverlay="@style/circle_avatar"
+            tools:ignore="MissingConstraints" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivDouther"
+            style="@style/style_four"
+            android:src="@drawable/my_douther"
+            app:shapeAppearanceOverlay="@style/circle_avatar"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivMyWife"
+            style="@style/style_four"
+            android:src="@drawable/my_husband"
+            app:shapeAppearanceOverlay="@style/circle_avatar"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivMyFriend"
+            style="@style/style_four"
+            android:src="@drawable/my_dog"
+            app:shapeAppearanceOverlay="@style/circle_avatar"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            style="@style/style_five"
+            android:text="Хазяин Сергей"
+             />
+
+        <TextView
+           style="@style/style_five"
+            android:text="Дочь хазяина"
+            />
+
+        <TextView
+            style="@style/style_five"
+            android:text="Жена хазяина"
+            />
+
+        <TextView
+            style="@style/style_five"
+            android:text="Подруга Альма"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:background="#7b7b7b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout4"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/grey"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            style="@style/style_second"
+            android:drawableTop="@drawable/icons8_bottom_main"
+            android:text="Главная" />
+
+        <TextView
+            style="@style/style_second"
+            android:drawableTop="@drawable/icons8_bootom_service"
+            android:text="Сервисы" />
+
+        <TextView
+            style="@style/style_second"
+            android:drawableTop="@drawable/icons8_bottom_mes"
+            android:text="Мессенджер" />
+
+        <TextView
+            style="@style/style_second"
+            android:drawableTop="@drawable/icons8_bottom_klip"
+            android:text="Клипы" />
+
+        <TextView
+            style="@style/style_second"
+            android:drawableTop="@drawable/icons8_bottom_profil"
+            android:text="Профиль" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
