@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/seryj_tekstura_stena_146097_1920x1080"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/ivAnimDog"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputLayoutLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Login"
+        app:helperTextEnabled="true"
+        app:helperText="Обязательно к заполнению"
+        app:helperTextTextColor="@color/black"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="300dp"
+        app:startIconDrawable="@drawable/icons8_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTint="@color/black_l"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="1dp"
+            android:inputType="textCapWords"
+            android:background="@color/grey"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutDog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        app:helperText="Обязательно к заполнению"
+        app:helperTextTextColor="@color/black"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="5dp"
+        app:startIconDrawable="@drawable/icons8_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutLogin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTint="@color/black_l"
+            android:inputType="numberPassword"
+            android:background="@color/grey"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="1dp"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Войти"
+        android:textColor="@color/grey_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutDog"
+        app:layout_constraintVertical_bias="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

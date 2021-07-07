@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/seryj_tekstura_stena_146097_1920x1080"
+    tools:context=".EditActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutDog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Как зовут собаку?"
+        app:helperTextTextColor="@color/teal_700"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="20dp"
+        app:startIconDrawable="@drawable/icons8_dog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edNameDog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTint="@color/black_l"
+            android:layout_marginTop="20dp"
+            android:layout_margin = "10dp"
+            android:inputType="textCapWords"
+            android:background="@color/grey"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="В каком городе живете?"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/icons8_city_ed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutDog">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edCity"
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textCapWords"
+            android:layout_margin = "10dp"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Сколько лет собаке?"
+        app:startIconDrawable="@drawable/icons8_age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutCity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edAge"
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:layout_margin = "10dp"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutPoroda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Какая порода?"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/icons8_poroda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutAge">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edPoroda"
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textCapWords"
+            android:layout_margin = "10dp"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btEditEditAct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Редактировать"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black_l"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutPoroda" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
